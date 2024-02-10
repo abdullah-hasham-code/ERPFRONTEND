@@ -25,6 +25,32 @@ export class ApiService {
 	deleteUserById(id: any) {
 		return this.app.get('deleteUserById?id=' + id, id);
 	}
+	//Account
+	getAllAccount() {
+		return this.app.get('getAllAccount');
+	}
+	getAccountById(id: any) {
+		return this.app.get('getAccountById?id=' + id, id);
+	} 
+	createAccount(obj: any) {
+		return this.app.post('createAccount', obj);
+	}
+	deleteAccountById(id: any) {
+		return this.app.get('deleteAccountById?id=' + id, id);
+	}
+
+	//AccountCategory
+	getAllAccountCat() {
+		return this.app.get('getAllAccountCategory');
+	}
+	//AccountType
+	getAllAccountType() {
+		return this.app.get('getAllAccountType');
+	}
+	//AccountGroup
+	getAllAccountGroup() {
+		return this.app.get('getAllAccGroupCategory');
+	}
 	getAllShop() {
 		return this.app.get('getAllShops');
 	}

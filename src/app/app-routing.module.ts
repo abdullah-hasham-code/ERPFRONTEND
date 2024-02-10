@@ -24,6 +24,12 @@ import { PaymentReceivedComponent } from './payment-received/payment-received.co
 import { PaymentReceivedFormComponent } from './payment-received-form/payment-received-form.component';
 import { InvoiceReportComponent } from './invoice-report/invoice-report.component';
 import { CustomerLedgerComponent } from './customer-ledger/customer-ledger.component';
+import { AccountListComponent } from './account-list/account-list.component';
+import { AccountCatListComponent } from './account-cat-list/account-cat-list.component';
+import { AccountFormComponent } from './account-form/account-form.component';
+import { AccountGroupListComponent } from './account-group-list/account-group-list.component';
+import { AccountGroupFormComponent } from './account-group-form/account-group-form.component';
+import { AccountCatFormComponent } from './account-cat-form/account-cat-form.component';
 
 
 const routes: Routes = [
@@ -58,6 +64,15 @@ const routes: Routes = [
   {path:'paymentreceived', component: PaymentReceivedComponent,},
   {path:'payment-received-form', component: PaymentReceivedFormComponent},
   {path: 'payment-received-form/:id', component: PaymentReceivedFormComponent},
+  { path: 'account-list', component: AccountListComponent, },
+  { path: 'account-form', component: AccountFormComponent,},
+  { path: 'account-form/:id', component: AccountFormComponent ,},
+  { path: 'account-grp-list', component: AccountGroupListComponent, },
+  { path: 'account-grp-form', component: AccountGroupFormComponent,},
+  { path: 'account-grp-form/:id', component: AccountGroupFormComponent ,},
+  { path: 'account-cat-list', component: AccountCatListComponent, },
+  { path: 'account-cat-form', component: AccountCatFormComponent,},
+  { path: 'account-cat-form/:id', component: AccountCatFormComponent ,},
 
 ];
 

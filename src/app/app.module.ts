@@ -42,6 +42,12 @@ import { InvoiceFormComponent } from './invoice-form/invoice-form.component';
 import { PaymentReceivedFormComponent } from './payment-received-form/payment-received-form.component';
 import { InvoiceReportComponent } from './invoice-report/invoice-report.component';
 import { CustomerLedgerComponent } from './customer-ledger/customer-ledger.component';
+import { AccountFormComponent } from './account-form/account-form.component';
+import { AccountListComponent } from './account-list/account-list.component';
+import { AccountGroupListComponent } from './account-group-list/account-group-list.component';
+import { AccountGroupFormComponent } from './account-group-form/account-group-form.component';
+import { AccountCatFormComponent } from './account-cat-form/account-cat-form.component';
+import { AccountCatListComponent } from './account-cat-list/account-cat-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +77,13 @@ import { CustomerLedgerComponent } from './customer-ledger/customer-ledger.compo
     InvoiceFormComponent,
     PaymentReceivedFormComponent,
     InvoiceReportComponent,
-    CustomerLedgerComponent
+    CustomerLedgerComponent,
+    AccountFormComponent,
+    AccountListComponent,
+    AccountGroupListComponent,
+    AccountGroupFormComponent,
+    AccountCatFormComponent,
+    AccountCatListComponent
   ],
   imports: [
     HttpClientModule,TableModule,DividerModule,FormsModule,ReactiveFormsModule,DropdownModule,AccordionModule,
