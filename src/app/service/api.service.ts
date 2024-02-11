@@ -43,13 +43,26 @@ export class ApiService {
 	getAllAccountCat() {
 		return this.app.get('getAllAccountCategory');
 	}
+	createAccountCategory(obj: any) {
+		return this.app.post('createAccountCategory', obj);
+	}
+	getAccountCatById(id: any) {
+		return this.app.get('getAccountCategoryById?id=' + id, id);
+	} 
 	//AccountType
 	getAllAccountType() {
 		return this.app.get('getAllAccountType');
 	}
 	//AccountGroup
 	getAllAccountGroup() {
-		return this.app.get('getAllAccGroupCategory');
+		return this.app.get('getAllAccGroup');
+	}
+	
+	getAccountGroupById(id: any) {
+		return this.app.get('getAccGroupById?id=' + id, id);
+	} 
+	createAccountGroup(obj: any) {
+		return this.app.post('createAccGroup', obj);
 	}
 	getAllShop() {
 		return this.app.get('getAllShops');
