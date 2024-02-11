@@ -61,7 +61,7 @@
         <div class="pad-wrapper">
             <div class="box">
                 <div class="content">
-                    <p-table #dt [scrollable]="true" scrollHeight="600px"  responsiveLayout="scroll" [value]="users" styleClass="p-datatable-sm p-datatable-gridlines" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+                    <p-table #dt [scrollable]="true" scrollHeight="600px"  responsiveLayout="scroll" [value]="account" styleClass="p-datatable-sm p-datatable-gridlines" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
                     [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true" [rows]="10">
                     <ng-template pTemplate="caption">
                         <div class="flex">
@@ -71,29 +71,29 @@
                     </ng-template>    
                     <ng-template pTemplate="header">
                             <tr>
-                                <th pSortableColumn="code">User Name <p-sortIcon field="code"></p-sortIcon></th>
-                                <th pSortableColumn="name">Email <p-sortIcon field="name"></p-sortIcon></th>
-                                <th pSortableColumn="category">Phone <p-sortIcon field="category"></p-sortIcon></th>
-                                <th pSortableColumn="quantity">Address <p-sortIcon field="quantity"></p-sortIcon></th>
-                                <th pSortableColumn="price">Gender<p-sortIcon field="price"></p-sortIcon></th>
-                                <th pSortableColumn="price">Joining Date<p-sortIcon field="price"></p-sortIcon></th>
+                                <th pSortableColumn="code">Name <p-sortIcon field="code"></p-sortIcon></th>
+                                <th pSortableColumn="name">Account Number <p-sortIcon field="name"></p-sortIcon></th>
+                                <th pSortableColumn="category">Tax Amount <p-sortIcon field="category"></p-sortIcon></th>
+                                <th pSortableColumn="quantity">Tax Limit <p-sortIcon field="quantity"></p-sortIcon></th>
+                                <th pSortableColumn="price">Manual Code<p-sortIcon field="price"></p-sortIcon></th>
+                                <th pSortableColumn="price">Kind Code<p-sortIcon field="price"></p-sortIcon></th>
                                 <th pSortableColumn="price">Action<p-sortIcon field="price"></p-sortIcon></th>
                             </tr>
                         </ng-template>
-                        <ng-template pTemplate="body" let-user>
+                        <ng-template pTemplate="body" let-acc>
                             <tr>
-                                <td>{{user.name}}</td>
-                                <td>{{user.email}}</td>
-                                <td>{{user.phone}}</td>
-                                <td>{{user.address}}</td>
-                                <td>{{user.gender}}</td>
-                                <td>{{user.joiningDate}}</td>
+                                <td>{{acc.name}}</td>
+                                <td>{{acc.accountNumber}}</td>
+                                <td>{{acc.taxAmount}}</td>
+                                <td>{{acc.taxLimit}}</td>
+                                <td>{{acc.manualCode}}</td>
+                                <td>{{acc.kindCode}}</td>
                                 <td style="position: relative;" class="d-flex">
                                     <button style="margin-right: 3px" pButton pRipple
                                         icon="pi pi-pencil" class="p-button-rounded p-button-info"
-                                        (click)="editUser(user.userId)"></button>
+                                        (click)="editUser(acc.id)"></button>
                                     <button pButton pRipple icon="pi pi-trash"
-                                        class="p-button-rounded p-button-danger" (click)="deleteUser(user)"></button>
+                                        class="p-button-rounded p-button-danger" (click)="deleteUser(acc)"></button>
                                 </td>
                             </tr>
                         </ng-template>

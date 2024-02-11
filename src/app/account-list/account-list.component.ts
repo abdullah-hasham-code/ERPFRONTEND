@@ -15,13 +15,12 @@ export class AccountListComponent {
   constructor(private router: Router, private api: ApiService, private messageService: MessageService, private confirmationService: ConfirmationService) { }
 	title = 'BMSFrontEnd';
 	ngOnInit(): void {
-		this.getUserList();
+		this.getAccountList();
 	}
-	users: any = [];
-	getUserList() {
-		this.api.getAllUser().subscribe((res: any) => {
-			console.log(res);
-			this.users = res;
+	account: any = [];
+	getAccountList() {
+		this.api.getAllAccount().subscribe((res: any) => { 
+			this.account = res;
 		})
 	}
 	addUser() {
@@ -37,7 +36,7 @@ export class AccountListComponent {
 
 	}
 	editUser(id: any) {
-		this.router.navigate(['user-form/' + id]);
+		this.router.navigate(['account-form/' + id]);
 	}
 	deleteUser(user: any) {
 		this.confirmationService.confirm({
@@ -45,7 +44,7 @@ export class AccountListComponent {
 			accept: () => {
 				//Actual logic to perform a confirmation
 				this.api.deleteUserById(user.userId).subscribe(res => {
-					this.users = this.users.filter((item: any) => item.userId !== user.userId);
+					this.account = this.account.filter((item: any) => item.userId !== user.userId);
 					this.messageService.add({ severity: 'success', summary: 'Success', detail: "Deleted Successfully" });
 					return;
 				}, err => { })
@@ -58,12 +57,12 @@ export class AccountListComponent {
 	exportPdf() {
 		const doc = new jsPDF('l', 'mm', 'a4');
 		const head = [['userId', 'Name', 'Is Active', 'Name', 'Email', 'joiningDate', 'Phone']]
-		let body = this.users.map((elemento: { [s: string]: unknown; } | ArrayLike<unknown>) => Object.values(elemento));
+		let body = this.account.map((elemento: { [s: string]: unknown; } | ArrayLike<unknown>) => Object.values(elemento));
 			autoTable(doc, {
 				head: head,
 				body: body,
 				didDrawCell: (data) => {
-					data = this.users;
+					data = this.account;
 				},
 			});
 
@@ -72,7 +71,7 @@ export class AccountListComponent {
 
 	exportExcel() {
 		import('xlsx').then((xlsx) => {
-			const worksheet = xlsx.utils.json_to_sheet(this.users);
+			const worksheet = xlsx.utils.json_to_sheet(this.account);
 			const workbook = { Sheets: { data: worksheet }, SheetNames: ['data'] };
 			const excelBuffer: any = xlsx.write(workbook, { bookType: 'xlsx', type: 'array' });
 			this.saveAsExcelFile(excelBuffer, 'products');
