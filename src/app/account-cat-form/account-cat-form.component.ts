@@ -10,7 +10,7 @@ import { MessageService } from 'primeng/api';
 })
 export class AccountCatFormComponent {
   constructor(private route: ActivatedRoute,private router: Router,private api: ApiService,private messageService: MessageService,) { }
-  formData: any = {  };
+  formData: any = {  };//Abdullah
   userTypes:any=[];
   genders:any=[{label:'Male',value:'Male'},{label:'Female',value:'Female'}];
   urlId: any;
