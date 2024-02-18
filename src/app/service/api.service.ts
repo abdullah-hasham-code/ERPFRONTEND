@@ -57,13 +57,56 @@ export class ApiService {
 	getAllAccountGroup() {
 		return this.app.get('getAllAccGroup');
 	}
-	
+
+	//Sales Man
+		
+	getAllSalesMan() {
+		return this.app.get('getAllSalesMan');
+	}
+	getSalesManById(id: any) {
+		return this.app.get('getSalesManById?id=' + id, id);
+	}
+	deleteSalesManById(id: any) {
+		return this.app.get('deleteSalesManById?id=' + id, id);
+	}
+	createSalesMan(obj: any) {
+		return this.app.post('createSalesMan', obj);
+	}
+	//Party
+		
+	getAllParty() {
+		return this.app.get('getAllParty');
+	}
+	getRPartyById(id: any) {
+		return this.app.get('getRPartyById?id=' + id, id);
+	}
+	deletePartyById(id: any) {
+		return this.app.get('deletePartyById?id=' + id, id);
+	}
+	createParty(obj: any) {
+		return this.app.post('createParty', obj);
+	}
+	getAllArea() {
+		return this.app.get('getAllArea');
+	}
+	getAllCity() {
+		return this.app.get('getAllCity');
+	}
+	getAllSubArea() {
+		return this.app.get('getAllSubArea');
+	}
+	//Sales Man Type
+	getAllSalesManType() {
+		return this.app.get('getAllSalesManType');
+	}
 	getAccountGroupById(id: any) {
 		return this.app.get('getAccGroupById?id=' + id, id);
 	} 
 	createAccountGroup(obj: any) {
 		return this.app.post('createAccGroup', obj);
 	}
+	//Shop
+
 	getAllShop() {
 		return this.app.get('getAllShops');
 	}

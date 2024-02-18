@@ -48,6 +48,12 @@ import { AccountGroupListComponent } from './account-group-list/account-group-li
 import { AccountGroupFormComponent } from './account-group-form/account-group-form.component';
 import { AccountCatFormComponent } from './account-cat-form/account-cat-form.component';
 import { AccountCatListComponent } from './account-cat-list/account-cat-list.component';
+import { SalesManFormComponent } from './sales-man-form/sales-man-form.component';
+import { SalesManListComponent } from './sales-man-list/sales-man-list.component'; 
+import { PartyFormComponent } from './party-form/party-form.component';
+import { PartyListComponent } from './party-list/party-list.component';
+import { PartyPriceListComponent } from './party-price-list/party-price-list.component';
+import { PartyPriceFormComponent } from './party-price-form/party-price-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +89,10 @@ import { AccountCatListComponent } from './account-cat-list/account-cat-list.com
     AccountGroupListComponent,
     AccountGroupFormComponent,
     AccountCatFormComponent,
-    AccountCatListComponent
+    AccountCatListComponent,
+    SalesManFormComponent,
+    SalesManListComponent, 
+    PartyFormComponent, PartyListComponent, PartyPriceListComponent, PartyPriceFormComponent
   ],
   imports: [
     HttpClientModule,TableModule,DividerModule,FormsModule,ReactiveFormsModule,DropdownModule,AccordionModule,

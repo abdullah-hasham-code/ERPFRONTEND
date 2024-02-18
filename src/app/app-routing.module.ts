@@ -30,6 +30,12 @@ import { AccountFormComponent } from './account-form/account-form.component';
 import { AccountGroupListComponent } from './account-group-list/account-group-list.component';
 import { AccountGroupFormComponent } from './account-group-form/account-group-form.component';
 import { AccountCatFormComponent } from './account-cat-form/account-cat-form.component';
+import { SalesManListComponent } from './sales-man-list/sales-man-list.component';
+import { SalesManFormComponent } from './sales-man-form/sales-man-form.component';
+import { PartyListComponent } from './party-list/party-list.component';
+import { PartyFormComponent } from './party-form/party-form.component';
+import { PartyPriceListComponent } from './party-price-list/party-price-list.component';
+import { PartyPriceFormComponent } from './party-price-form/party-price-form.component';
 
 
 const routes: Routes = [
@@ -72,7 +78,16 @@ const routes: Routes = [
   { path: 'account-grp-form/:id', component: AccountGroupFormComponent ,},
   { path: 'account-cat-list', component: AccountCatListComponent, },
   { path: 'account-cat-form', component: AccountCatFormComponent,},
-  { path: 'account-cat-form/:id', component: AccountCatFormComponent ,},
+  { path: 'account-cat-form/:id', component: AccountCatFormComponent ,}, 
+  { path: 'sales-man-list', component: SalesManListComponent, },
+  { path: 'sales-man-form', component: SalesManFormComponent,},
+  { path: 'sales-man-form/:id', component: SalesManFormComponent ,},
+  { path: 'party-list', component: PartyListComponent, },
+  { path: 'party-form', component: PartyFormComponent,},
+  { path: 'party-form/:id', component: PartyFormComponent ,},
+  { path: 'party-price-list', component: PartyPriceListComponent, },
+  { path: 'party-price-form', component: PartyPriceFormComponent,},
+  { path: 'party-price-form/:id', component: PartyPriceFormComponent ,},
 
 ];
 
