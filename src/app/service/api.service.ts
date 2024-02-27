@@ -86,6 +86,14 @@ export class ApiService {
 	createParty(obj: any) {
 		return this.app.post('createParty', obj);
 	}
+
+	//PartyPrice
+	createPartyPrice(obj: any) {
+		return this.app.post('createPartyPrice', obj);
+	}
+	getAllPartyPrice() {
+		return this.app.get('getAllPartyPrice');
+	}
 	getAllArea() {
 		return this.app.get('getAllArea');
 	}
