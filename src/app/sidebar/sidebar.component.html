@@ -61,16 +61,13 @@
                 </li>
             </ul>
             
-        </li>
-
-                <!-- Main Dropdown (Finance) -->
-        <li *ngIf="userType == 2 || userType == 1" class="nav-item">
+        </li> 
+        <!-- <li *ngIf="userType == 2 || userType == 1" class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#Finance" data-bs-toggle="collapse" href="#">
                 <i class="pi pi-money-bill"></i><span>FINANCE</span><i class="pi pi-chevron-down ms-auto"></i>
             </a>
             <ul id="Finance" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                
-                <!-- Nested Dropdown (Sales) -->
+                 
                 <li *ngIf="userType == 2 || userType == 1" class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#Sales" data-bs-toggle="collapse" href="#">
                         <i class="pi pi-shopping-cart"></i><span>Sales</span><i class="pi pi-chevron-down ms-auto"></i>
@@ -80,10 +77,7 @@
                         
                         <a routerLink="/invoices" routerLinkActive="active">
                             <i class="fa fa-helmet-un"></i><span>Invoices</span>
-                        </a>
-                        <!-- <a routerLink="/recurringinvoices" routerLinkActive="active">
-                            <i class="fa fa-helmet-un"></i><span>Recurring Invoices</span>
-                        </a> -->
+                        </a> 
                         <a routerLink="/paymentreceived" routerLinkActive="active">
                             <i class="fa fa-helmet-un"></i><span>Payment Receipt</span>
                         </a>
@@ -100,6 +94,45 @@
                             <i class="fa fa-helmet-un"></i><span>Purchase Expenses</span>
                         </a>
                         <a routerLink="/purchaseorder" routerLinkActive="active">
+                            <i class="fa fa-helmet-un"></i><span>Purchase Order</span>
+                        </a>
+                    </ul>
+                </li>
+            </ul>
+            
+        </li> -->
+        <li *ngIf="userType == 2 || userType == 1" class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Finance" data-bs-toggle="collapse" href="#">
+                <i class="pi pi-money-bill"></i><span>FINANCE</span><i class="pi pi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Finance" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                 
+                <li *ngIf="userType == 2 || userType == 1" class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#Sales" data-bs-toggle="collapse" href="#">
+                        <i class="pi pi-shopping-cart"></i><span>Sales</span><i class="pi pi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Sales" class="nav-content collapse" data-bs-parent="#Finance">
+                        
+                        
+                        <a routerLink="/invoices" routerLinkActive="active">
+                            <i class="fa fa-helmet-un"></i><span>Invoices</span>
+                        </a> 
+                        <a routerLink="/paymentreceived" routerLinkActive="active">
+                            <i class="fa fa-helmet-un"></i><span>Payment Receipt</span>
+                        </a>
+                        <a routerLink="/creditnotes" routerLinkActive="active">
+                            <i class="fa fa-helmet-un"></i><span>Credit Notes</span>
+                        </a>
+                    </ul>
+                    <a class="nav-link collapsed" data-bs-target="#Purchases" data-bs-toggle="collapse" href="#">
+                        <i class="pi pi-shopping-cart"></i><span>PURCHASES</span><i class="pi pi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Purchases" class="nav-content collapse" data-bs-parent="#Finance">
+                        
+                        <a routerLink="/expenses" routerLinkActive="active">
+                            <i class="fa fa-helmet-un"></i><span>Purchase Expenses</span>
+                        </a>
+                        <a routerLink="/purch-order-list" routerLinkActive="active">
                             <i class="fa fa-helmet-un"></i><span>Purchase Order</span>
                         </a>
                     </ul>

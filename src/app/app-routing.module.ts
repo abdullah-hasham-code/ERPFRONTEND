@@ -36,6 +36,8 @@ import { PartyListComponent } from './party-list/party-list.component';
 import { PartyFormComponent } from './party-form/party-form.component';
 import { PartyPriceListComponent } from './party-price-list/party-price-list.component';
 import { PartyPriceFormComponent } from './party-price-form/party-price-form.component';
+import { PurcOrderFormComponent } from './purc-order-form/purc-order-form.component';
+import { PurcOrderListComponent } from './purc-order-list/purc-order-list.component';
 
 
 const routes: Routes = [
@@ -88,6 +90,9 @@ const routes: Routes = [
   { path: 'party-price-list', component: PartyPriceListComponent, },
   { path: 'party-price-form', component: PartyPriceFormComponent,},
   { path: 'party-price-form/:id', component: PartyPriceFormComponent ,},
+  { path: 'purch-order-list', component: PurcOrderListComponent, },
+  { path: 'purch-order-form', component: PurcOrderFormComponent,},
+  { path: 'purch-order-form/:id', component: PurcOrderFormComponent ,},
 
 ];
 

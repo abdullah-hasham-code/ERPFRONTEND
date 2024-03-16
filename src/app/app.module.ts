@@ -54,6 +54,8 @@ import { PartyFormComponent } from './party-form/party-form.component';
 import { PartyListComponent } from './party-list/party-list.component';
 import { PartyPriceListComponent } from './party-price-list/party-price-list.component';
 import { PartyPriceFormComponent } from './party-price-form/party-price-form.component';
+import { PurcOrderListComponent } from './purc-order-list/purc-order-list.component';
+import { PurcOrderFormComponent } from './purc-order-form/purc-order-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,7 +94,7 @@ import { PartyPriceFormComponent } from './party-price-form/party-price-form.com
     AccountCatListComponent,
     SalesManFormComponent,
     SalesManListComponent, 
-    PartyFormComponent, PartyListComponent, PartyPriceListComponent, PartyPriceFormComponent
+    PartyFormComponent, PartyListComponent, PartyPriceListComponent, PartyPriceFormComponent, PurcOrderListComponent, PurcOrderFormComponent
   ],
   imports: [
     HttpClientModule,TableModule,DividerModule,FormsModule,ReactiveFormsModule,DropdownModule,AccordionModule,
