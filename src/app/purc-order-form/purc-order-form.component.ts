@@ -14,6 +14,7 @@ export class PurcOrderFormComponent {
   userTypes:any=[];
   genders:any=[{label:'Male',value:'Male'},{label:'Female',value:'Female'}];
   urlId: any;
+  purchOrderData: any[] = [];
   ngOnInit(): void {
     this.urlId = this.route.snapshot.paramMap.get('id'); 
     this.getAccountType();
@@ -45,6 +46,17 @@ export class PurcOrderFormComponent {
 	
 		})
 
+  }
+  addPurchaseOrder(){}
+  AddData(){
+    this.purchOrderData.push({no:0,barCode:'',itemName:'',bonusQty:'',
+    salePrice:0,desc:0,flatDesconeachQty:0,gST:0,gSTPer2:0,remakrs:''});
+  }
+  RemoveData(){
+    this.purchOrderData=[];
+  }
+  RemoveCol(index:number){ 
+    this.purchOrderData.splice(index,1);
   }
 
   usrGrpCat:any=[];

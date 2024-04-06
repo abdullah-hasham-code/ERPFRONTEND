@@ -217,4 +217,13 @@ export class ApiService {
 	getCustomerLedgerByCustomerId(id:number) {
 		return this.app.get('getCustomerLedgerByCustomerId?id='+id);
 	}
+	getAllPurhasedetails() {
+		return this.app.get('getAllPurchases');
+	}
+	deletePurhaseById(id: any) {
+		return this.app.get('deletePurchaseById?id=' + id, id);
+	}
+	createPurchase(obj: any) {
+		return this.app.post('createPurchase', obj);
+	}
 }
